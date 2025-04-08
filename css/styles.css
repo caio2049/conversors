@@ -1,3 +1,4 @@
+@import url(components.css);
 @import url(utilities.css);
 
 * {
@@ -5,4 +6,52 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+
+html {
+  height: 100vh;
+  font-size: 20px;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 1.25em; */
+}
+
+select,
+input {
+  font-size: 1.2rem;
+  border: 0;
+  outline: 0;
+}
+
+input {
+  background-color: #aaaaaa;
+  color: black;
+  padding: 5px 5px;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+select {
+  border: 2px solid #868686da;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 2.5px 5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.to {
+  margin: 30px auto;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
 }
