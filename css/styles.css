@@ -55,3 +55,17 @@ select {
   text-align: center;
   font-size: 1.2rem;
 }
+
+.btn--container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+button {
+  border: 1px solid black;
+  padding: 4px 8px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
