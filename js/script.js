@@ -14,19 +14,18 @@ const btnConvert = document.querySelector(".btn-convert");
 const btnClear = document.querySelector(".btn-clear");
 
 // FUNCTIONS
-{
-  const metersToKilometers = (value) => value / 1000;
 
-  const metersToCentimeters = (value) => value * 100;
+const metersToKilometers = (value) => value / 1000;
 
-  const centimetersToMeters = (value) => value / 100;
+const metersToCentimeters = (value) => value * 100;
 
-  const centimetersToKilometers = (value) => value / 100000;
+const centimetersToMeters = (value) => value / 100;
 
-  const kilometersToMeters = (value) => value * 1000;
+const centimetersToKilometers = (value) => value / 100000;
 
-  const kilometersToCentimeters = (value) => value * 100000;
-}
+const kilometersToMeters = (value) => value * 1000;
+
+const kilometersToCentimeters = (value) => value * 100000;
 
 firstUnity.addEventListener("change", () => {
   // Get the option selected
@@ -51,23 +50,19 @@ btnConvert.addEventListener("click", () => {
       ? (measureTwo.value = metersToKilometers(value1))
       : (measureTwo.value = metersToCentimeters(value1))
   ) {
-    console.log(measureTwo.value);
-  }
-
-  if (
+    console.log(measureTwo.value, typeof measureTwo.value);
+  } else if (
     firstUnityValue === "cm" && secondUnityValue === "m"
       ? (measureTwo.value = centimetersToMeters(value1))
       : (measureTwo.value = centimetersToKilometers(value1))
   ) {
-    console.log(measureTwo.value);
-  }
-
-  if (
+    console.log(measureTwo.value, typeof measureTwo.value);
+  } else if (
     firstUnityValue === "km" && secondUnityValue === "m"
       ? (measureTwo.value = kilometersToMeters(value1))
       : (measureTwo.value = kilometersToCentimeters(value1))
   ) {
-    console.log(measureTwo.value);
+    console.log(measureTwo.value, typeof measureTwo.value);
   }
 });
 
