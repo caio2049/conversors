@@ -6,6 +6,30 @@ const secondUnity = document.querySelector(".unity-2");
 let firstUnityValue = firstUnity.value;
 let secondUnityValue = secondUnity.value;
 
+// Function to disable the same option in the second select
+const updateSecondUnityOptions = () => {
+  const selectedValue = firstUnity.value;
+
+  // Enable all options in the second select
+  Array.from(secondUnity.options).forEach((option) => {
+    option.disabled = false;
+  });
+
+  // Disable the option in the second select that matches the first select's value
+  const optionToDisable = Array.from(secondUnity.options).find(
+    (option) => option.value === selectedValue
+  );
+  if (optionToDisable) {
+    optionToDisable.disabled = true;
+  }
+};
+
+// Add event listener to the first select
+firstUnity.addEventListener("change", updateSecondUnityOptions);
+
+// Initialize the second select options on page load
+updateSecondUnityOptions();
+
 // Selecting measures insired
 const measureOne = document.querySelector(".measure-1");
 const measureTwo = document.querySelector(".measure-2");
