@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   /* font-size: 1.25em; */
+  background-color: #111;
+  color: white;
 }
 
 select,
