@@ -52,7 +52,7 @@ select {
 }
 
 .to {
-  margin: 30px auto;
+  margin: 26px auto;
   display: block;
   text-align: center;
   font-size: 1.2rem;
@@ -68,6 +68,21 @@ select {
 button {
   border: 1px solid black;
   padding: 4px 8px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   border-radius: 5px;
+}
+
+.btn-clear {
+  background-color: rgb(255, 54, 54);
+}
+
+.btn-convert {
+  background-color: rgb(218, 160, 53);
+}
+
+.container--unit-types {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 45px;
 }
